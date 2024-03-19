@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+</head>
+<body bgcolor="yellow">
+    <form method="post">
+        {% csrf_token%}
+
+    <h1 align="center">**Welcome** to My Calculator**</h1>
+    <table border="3"  align="center" bgcolor="pink" >
+       <tr>
+            <td>Enter First Number :</td>
+            <td> <input type="text" name="txtFirst" value="{{a}}"/> </td>
+        </tr>
+        <tr>
+            <td>Enter Second Number:</td>
+            <td> <input type="text" name="txtSecond" value="{{b}}"/> </td>
+        </tr>
+        <tr>
+            <td>Result:</td>
+            <td> <input type="text" name="txtResult" value="{{c}}"/> </td>
+        </tr>
+        <tr>
+            <td> <button>SUM</button> </td>
+        </tr>
+</form>
+</body>
+</html>

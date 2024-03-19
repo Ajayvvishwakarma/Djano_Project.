@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table</title>
+</head>
+<body>
+    <form method="post">
+    {% csrf_token %}
+    Enter a no. which table you want:
+    <input type="text" name="txtNum"/>
+    <button type="submit">Show Table</button>
+    <h1>{{ajay}}</h1>
+    </form>    
+</body>
+</html>

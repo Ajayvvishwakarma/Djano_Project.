@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>STATIC FILES</title>
+    <!-- <link href="http://127.0.0.1:8000/static/SMS/css/ajay.css" rel="stylesheet" type="text/css"/> -->
+    <link href="{% static 'SMS/css/ajay.css' %}" rel="stylesheet" type="text/css"/>
+    <script src="{% static 'SMS/js/ram.js' %}"></script>
+</head>
+<body>
+    <h1>**Example of STATIC FILES IN DJANGO**</h1> 
+    <!-- <img src="{% static 'SMS/images/radha.jipj.jpg' %}"  height="300px" width="300px" alt=""> -->
+    <img src="{% static 'SMS/images/radha.jipj.jpg' %}"  height="300px" width="300px" alt="">
+    <img src="{% static 'SMS/images/img.jpej.jpg' %}"  height="300px" width="300px" alt="">
+    <img src="{% static 'SMS/images/img.jpij.jpg' %}"  height="300px" width="300px" alt="">
+    <img src="{% static 'SMS/images/img.jpj.jpg' %}"  height="300px" width="300px" alt="">
+    <button onclick="welcome()">CLICK ME!</button>
+
+</body>
+</html>
+

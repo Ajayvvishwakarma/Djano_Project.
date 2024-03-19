@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+</head>
+<body bgcolor="yellow" >
+    <form method="post">
+        {% csrf_token %}
+    <h1>***Welcome to LMS Login Page***</h1>
+    <table>
+        <tr>
+            <th>UserName:</th>
+            <th><input type="text" name="txtUserName"/> </th>
+        </tr>
+        <tr>
+            <th>Password:</th>
+            <th><input type="password" name="txtPassword"/> </th>
+        </tr>
+        <tr>
+            <td><button type="submit">Login</button> </td>
+        </tr>
+    </table>
+    <h2><a href="{% url 'home' %}">Back to Home Page</a> </h2>
+</form>
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">              
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DJANGO - Web Security</title>
+</head>
+<body bgcolor="cyan" >
+    <h1 align="center">***WELCOME TO LMS DASHBOARD***</h1>
+    <table width="40%" align="center" bgcolor="pink" border="3">
+        <tr>
+            <th>PAGE NAME</th>
+            <th>REFERENCES</th>
+        </tr>
+        <tr>
+            <th>User Name</th>
+            <th><h2 style="color:red;font-size:30;"> {{request.user}}</h2> </th> 
+        </tr>
+        <tr>
+            <th>HOME</th>
+            <!-- <th><a href="http://127.0.0.1:8000/lms/home/">Home</a> </th>     -->
+            <th><a href="{% url 'home' %}">Home</a> </th>
+        </tr>
+        <tr>
+            <th>REGISTER</th>
+            <th><a href="{% url 'register' %}" target="_blank">Register</a> </th> 
+        </tr>
+        <tr>
+            <th>LOGIN</th>
+            <th><a href="{% url 'login' %}" target="_blank">Login</a></th>
+        </tr>
+        <tr>
+            <th>Logout</th>
+            <th><a href="{% url 'logout' %}" target="_blank">Logout</a></th>
+        </tr>
+        <tr>
+            <th>SECURE1</th>
+            <th><a href="{% url 'secure1' %}" target="_blank">Secure1</a></th>
+        </tr>
+        <tr>
+            <th>SECURE2</th>
+            <th><a href="{% url 'secure2' %}" target="_blank">Secure2</a></th>
+        </tr>
+        <tr>
+            <th>UNSECURE1</th>
+            <th><a href="{% url 'unsecure1' %}" target="_blank">Unsecure1</a></th>
+        </tr>
+        <tr>
+            <th>UNSECURE2</th>
+            <th><a href="{% url 'unsecure2' %}" target="_blank">Unsecure2</a></th>
+        </tr>
+    </table>
+</body>
+</html>

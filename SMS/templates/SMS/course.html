@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COURSE</title>
+</head>
+<body bgcolor="cyan">
+    <form method="post">
+    {% csrf_token %}
+    <h1>****COURSE WISE STUDENT DETAILS****</h1>
+    Course Name:
+    <select name="txtcid">
+        {% for course in courses %}
+        {% if cid == course.id  %}
+        <option value="{{course.id}}" selected>{{course.name}}</option>
+        {% else %}
+        <option value="{{course.id}}" selected>{{course.name}}</option>
+        {%endif%}
+        {% endfor %}   
+    </select>
+    <button>Get Student Details</button>
+    <br/><br/>
+    <h1>We Have Following Student of {{cname}} Given Below:</h1>
+    <table border="3" bgcolor="yellow">
+        <tr>
+            <th>Sr.No.</th>
+            <th>Student Name</th>
+            <th>MobileNo</th>
+            <th>Course Name</th>
+        </tr>
+        {% for stu in students %}
+        <tr>
+            <td>{{forloop.counter}}</td>
+            <td>{{stu.name}}</td>
+            <td>{{stu.mobileno}}</td>
+            <td>{{cname}}</td>
+        <tr>
+        {% empty %}
+        <tr>
+            <th colspan="4" style="color:red"";font-size: 20px;"> No Student Enrolled in this Course!! </th>
+        </tr>
+        {% endfor %}  
+    </table>
+</form> 
+</body>
+</html>

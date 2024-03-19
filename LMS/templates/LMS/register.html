@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+</head>
+<body bgcolor="yellow">
+    <form method="post">
+        {% csrf_token %}
+    <h1>Welcome to LMS Register Page*</h1>
+    <table border="3" bgcolor="cyan" width="40%">
+    {{forms}}
+    <tr>
+        <td><button>Register</button> </td> 
+    </tr>
+    </table>
+    <h2><a href="{% url 'home' %}">Back to Home Page</a> </h2>
+</form>
+</body>
+</html>
